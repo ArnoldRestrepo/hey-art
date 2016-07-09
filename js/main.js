@@ -1,5 +1,5 @@
         // Desaparecer/Aparecer menu menu cuando bajo
-        /*$(function() {
+        $(function() {
             var pA, pN = 0;
             $(window).scroll(function(e){
             e.stopPropagation();
@@ -12,7 +12,7 @@
             }
                 pA = pN;
             });
-        });*/
+        });
 
         //Scroll Top
         (function() {
