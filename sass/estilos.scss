@@ -1,0 +1,786 @@
+// Variables para los colores, texto, links 
+@import "compass/css3";
+// Colores 
+$morado: #522375;
+$grisOscuro: #3a3539;
+$grisClaro: #f9f9f9;
+$blanco: #fff;
+$negro: #000;
+
+// Texto
+$por: 1em;
+$text: 1em;
+// Titulos
+@import 'https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i';
+@mixin titulos($por){
+    font-family: 'Arvo', serif;
+}
+
+// Párrafos
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700';
+@mixin parrafos($text){
+    font-family: 'Open Sans', sans-serif;
+}
+
+// Enlaces
+@mixin enlace{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/**********************************
+***********************************/
+
+// Titulos
+
+h1,h2,h3,h4{
+    @include titulos(1em);
+}
+
+h1{font-size: $por + 2;font-weight: bold;} h2{font-size: $por + 1;font-weight: bold;}
+h3{font-size: $por + .4;font-weight: bold;} h4{font-size: $por;font-weight: bold;}
+
+// Parrafos
+
+p{
+    @include parrafos(1em);
+    font-size: $text + .3;
+}
+
+p::selection{
+    background-color: $morado;
+    color: $grisClaro;
+}
+// Enlaces 
+a{
+    text-decoration: none;
+    @include enlace;
+    font-size: .9em;
+}
+
+img{
+    width: 100px;
+    height: auto;
+}
+/*****************************************************************************
+******************************************************************************/
+
+/* Estructura general del Sitio*/
+
+.contenedor{
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+    margin: 0 auto;
+    
+    header{
+        width: 100%;
+        height: 100px;
+        position: fixed; /* Para que se quede pegado*/
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background: $morado;
+        box-sizing: border-box;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, .7);
+        
+        /*Logotipo*/
+        figure.logo{
+            float: left;
+            padding: 20px 100px;
+            img{
+                width: 200px;
+            }
+        }
+
+        /*Navegación*/  
+        .menu-colapsado {
+              transition:all .25s;
+              position:fixed;
+              top:20px;
+              right:10px;
+              height:40px;
+              width:40px;
+              z-index:1;
+              cursor:pointer;
+                ul {
+                  transition:all .6s;
+                  position:fixed;
+                  left:-9000px;
+                }
+        }
+            .hamburguesa {
+                position:fixed;
+                right:60px;
+                top:45px;
+                height:6px;
+                width:40px;
+                border-radius:15px;
+                background-color:rgba(255,255,255,0.75);
+                &:before {
+                transition:all .25s;
+                content:"";
+                position:absolute;
+                left:0;
+                top:-10px;
+                height:6px;
+                width:40px;
+                border-radius:15px;
+                background-color:rgba(255,255,255,0.75);
+            }
+            &:after {
+                  transition:all .25s;
+                  content:"";
+                  position:absolute;
+                  left:0;
+                  top:10px;
+                  height:6px;
+                  width:40px;
+                  border-radius:15px;
+                  background-color:rgba(255,255,255,0.75);
+                }
+            }
+             
+
+            .menu-expansion {
+              transition:all .25s;
+              text-align:center;
+              line-height: 110px;
+              height:100%;
+              width:100%;
+              border-radius:0px;
+              top:0;
+              right:0;
+              background-color:rgba(0,0,0,0.85);
+              ul {
+                transition:all .05s;
+                position:relative;
+                overflow-y: visible;
+                left:0;
+                z-index:2;
+              }
+              a {
+                transition:all .15s;
+                text-decoration:none;
+                color:white;
+                font-size:2em;
+                padding:5px;
+                &:hover {
+                  transition:all .15s;
+                  letter-spacing:2px;
+                  border:1px solid rgba(82,35,255,.15);
+                }
+              }
+            .hamburguesa {
+                background-color:transparent;
+                transition:all .25s;
+            &:before {
+                  transition:all .25s;
+                  content:"";
+                  transform:rotate(45deg);
+                  top:-0px;
+            }
+            &:after {
+                  transition:all .25s;
+                  content:"";
+                  transform:rotate(-45deg);
+                  top:0px;
+            }
+            }
+        }
+        /*Navegación*/ 
+    }
+    /* Cabecera */
+    
+    .inicio{
+        width: 100%;
+        height: 650px;
+        margin-top: 100px;
+        margin-bottom: 40px;
+        background-image: url(../img/FONDO.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: .98;
+
+        article.descripcion{
+            width: 40%;
+            height: 200px;
+            left: 100px;
+            top: 300px;
+            padding: 1.5em 0;
+            background-color: rgba(#111,.8);
+            position: relative;
+            text-align: center;
+            h1{
+                font-size: 3.5em;
+                color: $blanco;
+                text-shadow: 1px 2px 6px rgba(0,0,0,.9);
+                margin-bottom: 10px;
+            }
+
+            p{
+                padding: 5px;
+                font-size: 1.8em;
+                font-weight: 500;
+                color: $blanco;
+                margin-bottom: 10px;
+            }
+
+            h3{
+                font-size: 2.5em;
+                color: $blanco;
+                padding: 2%;
+                box-sizing: border-box;
+                vertical-align: baseline;
+            }
+
+            span#cambio{
+                    width: auto;
+                    color: $blanco;
+                    font-family: 'Arvo', sans-serif;
+                    font-size: 1em;
+                    padding: 2%;
+                }
+        }
+    }
+    /* Inicio */
+
+    .acerca{
+        width: 100%;
+        height: 600px;
+        background: $grisClaro;
+        box-shadow: 0px 4px 8px rgba(0,0,0,.3); 
+
+        article:first-child{
+            width: 85%;
+            margin: 0 auto;
+            h2{ margin: 10px 0px 20px 0px; }
+            p{line-height: 1.5; margin-bottom: 20px;font-size: 1.6em;}
+        }
+
+        hr{
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        article:last-child{
+            width: 85%;
+            margin: 0 auto;
+            h2{ margin: 10px 0px 10px 0px; margin-top: 20px;}
+
+            img{
+                margin-top: 20px;
+                width: 10%;
+                min-width: 3%;
+                display: inline-block;
+                float: left;
+                margin-left: 3.5%;
+            }
+        }
+    }
+    /* acerca */
+
+    .servicios{
+        width: 100%;
+        height: 630px;
+        margin-top: 40px;
+        background: $grisClaro;
+        box-shadow: 0px 4px 8px rgba(0,0,0,.3);
+        
+        h2{width: 85%;margin: 40px auto;}
+        p{width: 85%;margin: 20px auto;font-size: 1.8em;}
+
+        .general{
+            width: 85%;
+            margin-top: 80px;
+            margin-left: 8%;
+            text-align: center;
+            .proceso{
+                width: 20%;
+                margin: 40px auto;
+                display: inline-block;
+                float: left;
+
+                h3{
+                    margin-top: 40px;
+                }
+
+                img{
+                    width: 50%;
+                    margin-left: 1.5em;
+                }
+            }
+        }
+    }
+    /*Portafolio*/
+    .portafolio{
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+        background: $blanco;
+
+       .seleccion{
+        width: 85%;
+        margin: 0 auto;
+
+        .trabajos{
+            width: 100%;
+            margin: 0 auto;
+
+            h4{
+                font-size: 1.8em;
+                text-transform: uppercase;
+                text-align: center;
+                margin: 0px 0px 20px 0px;
+            }
+
+
+            img{
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+       }
+    }
+    
+    footer{
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+        background: $grisOscuro;
+        padding-top: 40px;
+
+        article.contacto{
+            width: 85%;
+            margin: 0 auto;
+
+            h2{
+                color: $blanco;
+                margin-bottom: 20px;
+            }
+
+            p{
+                color: $blanco;
+                margin-bottom: 20px;
+            }
+
+            form{
+                width: 100%;
+                min-width: 50%;
+                margin: 0 auto;
+
+ 
+                input:required:invalid {border-bottom: 1px solid red;} 
+                input:required:valid{border-bottom: 1px solid darkgreen;}
+
+                input[type="text"], input[type="email"]{
+                    width: 45%;
+                    padding: 20px 0px;
+                    margin-left: 4%;
+                    display: inline-block;
+                    background: transparent;
+                    border: 0;
+                    color: $blanco;
+                    font-size: 1.5em;
+                    border-bottom: 1px solid $blanco;
+                    outline: none;
+                }
+
+                textarea{
+                    width: 95%;
+                    padding: 20px 0px;
+                    margin-left: 4%;
+                    display: inline-block;
+                    background: transparent;
+                    border: 0;
+                    color: $blanco;
+                    border-bottom: 1px solid $blanco;
+                    outline: none;
+                    font-family: 'Open Sans', sans-serif;
+                    font-size: 1.3em;
+                }
+                
+
+                input[type="submit"] {
+                    background: #1FCE6D;
+                    border: 0;
+                    margin: 4%;
+                    text-align: center;
+                    width: 95%;
+                    height: 60px;
+                    border-radius: 3px;
+                    color: #fff;
+                    font-size: 1.8em;
+                    cursor: pointer;
+                    transition: background 0.3s ease-in-out;
+                }
+                input[type="submit"]:hover {
+                  background: #16aa56;
+                  animation-name: shake;
+                }
+            }
+
+        }
+
+        article.derechos{
+            width: 85%;
+            margin: 0 auto;
+            padding: 40px 0px;
+
+            img{
+                width: 15%;
+                display: inline-block;
+                float: left;
+            }
+
+            p{
+                width: 75%;
+                display: inline-block;
+                color: $blanco;
+                line-height: 1.3;
+                margin-left: 10px;
+                font-size: 1.2em;
+            }
+
+            a{
+                color: $blanco;
+            }
+        }
+    }
+
+}
+
+
+/**************************************************************
+***************************************************************/
+
+/* Dispositivos laptop tabletas horizontales */
+
+@media screen and (min-width: 768px) and (max-width: 1225px){
+    h2{font-size: 1.5em;}
+    h3{font-size: 1em;}
+    p{
+        font-size: 1.3em !important;
+    }
+    h4{
+        font-size: 1em !important;
+    }
+    .contenedor{
+        .inicio{
+            height: 550px;
+            article.descripcion{
+                width: 50%;
+                height: 120px;
+                padding: 2em 0;
+                top: 250px;
+                h1{font-size: 2.5em;}
+                p{font-size: 1em;}
+                h3{font-size: 1.5em;}
+                span#cambio{font-size: .9em;}
+            }
+        }
+        /* Inicio */
+        .acerca{
+            height: 460px;
+        }
+        /* Acerca */
+        .servicios{
+            height: 600px;
+            .general{
+                margin-top: 50px;
+                margin-left: 5%;
+                .proceso{
+                width: 50%;
+                min-width: 10%;
+                display: inline-block;
+
+                &:nth-child(3), &:nth-child(4){
+                    margin-top: 10px;
+                }
+
+                    h3{
+                        margin-top: 10px;
+                    }
+
+                    img{
+                        width: 20%;
+                        min-width: 15%;
+                    }
+                }
+            }
+        }
+        /* Servicios */
+        footer{
+            article.derechos{
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px 0px;
+
+            img{
+                width: 40%;
+                display: block;
+                float: left;
+                margin-left: 10px;
+            }
+
+            p{
+                width: 100%;
+                display: block;
+                clear: both;
+                color: $blanco;
+                line-height: 1.3;
+                margin-left:10px;
+                font-size: .9em !important;
+            }
+
+            a{
+                color: $blanco;
+                font-size: .7em !important;
+            }
+            }
+        }
+        /*footer*/
+    }
+
+    /* Contenedor */
+}
+
+/*****************************************************
+*****************************************************/
+
+
+/* Dispositivos smartphone y tabletas verticales*/
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    p{font-size: .9em !important;}
+    h2{font-size: 1.3em;}
+    h3{font-size: .8em;}
+    a{font-size: .7em;}
+    .contenedor{
+        header{
+            figure.logo{
+            float: left;
+            padding: 30px 60px;
+                img{
+                    width: 150px;
+                }
+            }
+        }
+
+        .inicio{
+            height: 350px;
+            article.descripcion{
+                width: 60%;
+                height: 130px;
+                padding: .9em;
+                text-align: center;
+                top: 100px;
+                left: 20px;
+
+                h1{font-size: 2em;}
+                p{font-size: 1em; line-height: 1.2;}
+                h3{font-size: 1.1em;}
+                span#cambio{font-size: .9em;}
+            }
+        }
+        /* Inicio */
+        .acerca{
+            height: 400px;
+            img{
+                width: 15%;
+            }
+        }
+        /* Acerca */
+        .servicios{
+            height: 470px;
+            .general{
+                margin-top: 50px;
+                margin-left: 5%;
+                .proceso{
+                width: 50%;
+                min-width: 10%;
+                display: inline-block;
+
+                &:nth-child(3), &:nth-child(4){
+                    margin-top: 10px;
+                }
+
+                    h3{
+                        margin-top: 10px;
+                    }
+
+                    img{
+                        width: 25%;
+                        min-width: 15%;
+                    }
+                }
+            }
+        }
+        /* Servicios */
+        .portafolio{
+            h4{
+                font-size: 1em !important;
+            }
+        }
+
+        footer{
+            form{
+                font-size: .8em !important;
+                input{
+                    width: 90% !important;
+                    display: block;
+                }
+            }
+
+            article.derechos{
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px 0px;
+
+            img{
+                width: 40%;
+                display: block;
+                float: left;
+                margin-left: 8px;
+            }
+
+            p{
+                width: 100%;
+                display: block;
+                clear: both;
+                color: $blanco;
+                line-height: 1.3;
+                margin-left: 8px;
+                font-size: .7em !important;
+            }
+        
+            a{
+                color: $blanco;
+                font-size: .9em;
+            }
+            }
+        }
+    }
+}
+
+/*****************************************************
+*****************************************************/
+/* Dispositivos smartphone */
+@media screen and (min-width: 320px) and (max-width: 479px) {
+    p{font-size: .9em !important;}
+    h2{font-size: 1.3em;}
+    h3{font-size: .8em;}
+    a{font-size: .7em;}
+    .contenedor{
+        header{
+            figure.logo{
+            float: left;
+            padding: 33px 30px;
+                img{
+                    width: 150px;
+                }
+            }
+            .inicio{
+            height: 350px;
+        }
+        /* Inicio */
+        }
+
+        .inicio{
+            height: 300px;
+            article.descripcion{
+                width: 70%;
+                height: 110px;
+                padding: 1.5em;
+                top: 120px;
+                left: 20px;
+
+                h1{font-size: 1.5em;}
+                p{font-size: .8em; line-height: 1.2;}
+                h3{font-size: 1em;}
+                span#cambio{font-size: .9em;}
+            }
+        }
+        /* Inicio */
+        .acerca{
+            height: 400px;
+            img{
+                width: 15%;
+            }
+        }
+        /* Acerca */
+        .servicios{
+            height: 420px;
+            .general{
+                margin-top: 50px;
+                margin-left: 5%;
+                .proceso{
+                width: 50%;
+                min-width: 10%;
+                display: inline-block;
+
+                &:nth-child(3), &:nth-child(4){
+                    margin-top: 10px;
+                }
+
+                    h3{
+                        margin-top: 10px;
+                    }
+
+                    img{
+                        width: 25%;
+                        min-width: 15%;
+                    }
+                }
+            }
+        }
+        /* Servicios */
+        .portafolio{
+            h4{
+                font-size: 1em !important;
+            }
+        }
+
+        footer{
+            form{
+                font-size: .7em;
+                input{
+                    width: 90% !important;
+                    display: block;
+                }
+            }
+
+            article.derechos{
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px 0px;
+
+            img{
+                width: 40%;
+                display: block;
+                float: left;
+                margin-left: 8px;
+            }
+
+            p{
+                width: 100%;
+                display: block;
+                clear: both;
+                color: $blanco;
+                line-height: 1.3;
+                margin-left: 8px;
+            }
+
+            a{
+                color: $blanco;
+                font-size: .9em;
+            }
+            }
+        }
+    }
+}
+/*****************************************************
+*****************************************************/
+
+
+
+

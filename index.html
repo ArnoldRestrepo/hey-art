@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="description" content="Hey-Art Portafolio Diseño Web">
+    <meta name="keywords" content="HTML5, CSS3, JavaScript, Photoshop, Ilustrator, Material Design">
+    <meta name="author" content="Arnold Restrepo Hernández">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Hey-Art</title>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+    <body>
+        <div class="contenedor">
+            <header>
+                <figure class="logo">
+                        <img src="img/Logo1.png" alt="Logotipo Hey-Art">
+                </figure>
+                <!-- Logotipo -->
+                <div class="menu-colapsado">
+                  <div class="hamburguesa"></div>
+                    <nav>
+                      <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#acerca">Acerca</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                      </ul>
+                    </nav>  
+                </div>
+                <!-- navegación -->
+            </header>
+            <!-- Header -->
+            <section id="inicio" class="inicio">
+                <article class="descripcion">
+                    <h1>¡BIENVENIDO!</h1>
+                    <p>Mi nombre es Arnold Restrepo, soy diseñador y programador web.</p>
+                     <h3>Me encanta <span id="cambio"></span></h3>
+
+                </article>
+                <!-- Descripción -->
+            </section>
+            <!-- Inicio -->
+            <section id="acerca" class="acerca">
+                <article>
+                    <h2>UN POCO SOBRE MÍ...</h2>
+                    <p>Productor Multimedia especializado en el diseño y la programación web, maneja  tecnologías HTML5, CSS3, JavaScript y PHP. Sus proyectos estaran a la vanguardía, basados en la funcionalidad y la velocidad que toda empresa necesita para generar más clientes y lograr mayor competitividad.</p>
+                </article>
+                <hr>
+                <article class="progreso">
+                    <h2>Progreso</h2>
+                    <div class="programas">
+                        <figure class="diagrama"><img src="img/photoshop.png" alt="Progreso Photoshop"></figure>
+                        <figure class="diagrama"><img src="img/ilustrator.png" alt="Progreso Ilustrator"></figure>
+                        <figure class="diagrama"><img src="img/indesign.png" alt="Progreso Indesign"></figure>
+                        <figure class="diagrama"><img src="img/css.png" alt="Progreso CSS3"></figure>
+                        <figure class="diagrama"><img src="img/html.png" alt="Progreso HTML5"></figure>
+                        <figure class="diagrama"><img src="img/js.png" alt="Progreso JavaScript"></figure>
+                        <figure class="diagrama"><img src="img/php.png" alt="Progreso PHP"></figure>
+                    </div>
+                </article>
+            </section>
+            <!-- Acerca -->
+            <section id="servicios" class="servicios">
+                <h2>SERVICIOS</h2>
+                <p>Soluciones creativas, funcionales y de alta calidad para sitios web, medios digitales e interfaces de usuario.</p>
+                    <div class="general">
+                        <article class="proceso">
+                                <img src="img/diseno.png" alt="Etapa de Diseño">
+                                <h3>Diseño</h3>
+                        </article>
+                        <!-- Etapa de Diseño -->
+                        <article class="proceso">
+                                <img src="img/ux.png" alt="Experiencia de Usuario">
+                                <h3>Experiencia <br>de Usuario</h3>
+                        </article>
+                        <!-- Etapa Experiencia de Usuario -->
+                        <article class="proceso">
+                                <img src="img/desarrollo.png" alt="Etapa de Desarrollo">
+                                <h3>Desarrollo</h3>
+                        </article>
+                        <!-- Etapa de Desarrollo -->
+                        <article class="proceso">
+                                <img src="img/phone.png" alt="Etapa de Desarrollo">
+                                <h3>Diseño <br>Responsive</h3>
+                        </article>
+                    </div>
+                    <!-- Etapa de Responsive Design -->
+            </section>
+            <!-- Servicios -->
+            <section id="portafolio" class="portafolio">
+                <article class="seleccion">
+                    <h2>PORTAFOLIO</h2>
+                        <article class="trabajos">
+                            <figure>
+                                <img src="img/Creative-Market-escritorio.png" alt="">
+                            </figure>
+                            <figcaption>
+                                <h4>Diagramación de Creative Market</h4>
+                            </figcaption>
+                        </article>
+                        <!-- Creative Market -->
+                        <article class="trabajos">
+                            <figure>
+                                <img src="img/Cabanas-escritorio.png" alt="House Love">
+                            </figure>
+                            <figcaption>
+                                <h4>Landing Page House Love</h4>
+                            </figcaption>
+                        </article>
+                        <!-- House Love -->
+                        <article class="trabajos">
+                            <figure>
+                                <img src="img/Escritores-escritorio.png" alt="Escritores">
+                            </figure>
+                            <figcaption>
+                                <h4>Landing Page Gowriting</h4>
+                            </figcaption>
+                        </article>
+                        <!-- Gowriting -->
+                        <article class="trabajos">
+                            <figure>
+                                <img src="img/Ambar-Estudios.png" alt="Ambar Estudios">
+                            </figure>
+                            <figcaption>
+                                <h4>Ambar Estudios</h4>
+                            </figcaption>
+                        </article>
+                </article>
+                    <!-- Ambar Estusios -->
+            </section>
+            <!-- Portafolio -->
+            <footer id="contacto">
+                <article class="contacto">
+                    <h2>CONTACTO</h1>
+                    <p>Enviame tus datos para colaborar con tu proyecto.</p>
+                        <form action="" method="">
+                            <input name="nombre" type="text" placeholder="Nombre" required>
+                            <input name="correo" type="email" placeholder="Correo" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                            <input name="website" type="text" placeholder="Sitio Web" required>
+                            <input name="asunto" type="text" placeholder="Asunto" required="">
+                            <textarea name="" id="" placeholder="Comentarios"></textarea>
+                            <input class="animacion" type="submit" value="Enviar">
+                        </form>
+                </article>
+                <article class="derechos">
+                    <figure>
+                        <img src="img/logo2.png" alt="Logo Hey-Art">
+                    </figure>
+                    <p>Hey-Art &copy; es una marca registrada cualquier copia o distribución sin autorización será sancionada.</p>
+                    <p>Todos los derechos reservados Arnold Restrepo Hernández productor multimedia, Sena 2016.</p>
+                    <p>Iconos hechos por Freepik de <a target="_blank" href="http://www.flaticon.com">www.flaticon.com </a></p>
+                </article>
+            </footer>
+        </div>
+        <!-- Contenedor General -->
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

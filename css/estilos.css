@@ -1,0 +1,758 @@
+@charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,700";
+/**********************************
+***********************************/
+h1, h2, h3, h4 {
+  font-family: 'Arvo', serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+}
+
+p::selection {
+  background-color: #522375;
+  color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9em;
+}
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+/*****************************************************************************
+******************************************************************************/
+/* Estructura general del Sitio*/
+.contenedor {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: hidden;
+  margin: 0 auto;
+  /* Cabecera */
+  /* Inicio */
+  /* acerca */
+  /*Portafolio*/
+}
+.contenedor header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  /* Para que se quede pegado*/
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #522375;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.7);
+  /*Logotipo*/
+  /*Navegaci├│n*/
+  /*Navegaci├│n*/
+}
+.contenedor header figure.logo {
+  float: left;
+  padding: 20px 100px;
+}
+.contenedor header figure.logo img {
+  width: 200px;
+}
+.contenedor header .menu-colapsado {
+  transition: all .25s;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+.contenedor header .menu-colapsado ul {
+  transition: all .6s;
+  position: fixed;
+  left: -9000px;
+}
+.contenedor header .hamburguesa {
+  position: fixed;
+  right: 60px;
+  top: 45px;
+  height: 6px;
+  width: 40px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.contenedor header .hamburguesa:before {
+  transition: all .25s;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  height: 6px;
+  width: 40px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.contenedor header .hamburguesa:after {
+  transition: all .25s;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  height: 6px;
+  width: 40px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.contenedor header .menu-expansion {
+  transition: all .25s;
+  text-align: center;
+  line-height: 110px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.contenedor header .menu-expansion ul {
+  transition: all .05s;
+  position: relative;
+  overflow-y: visible;
+  left: 0;
+  z-index: 2;
+}
+.contenedor header .menu-expansion a {
+  transition: all .15s;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  padding: 5px;
+}
+.contenedor header .menu-expansion a:hover {
+  transition: all .15s;
+  letter-spacing: 2px;
+  border: 1px solid rgba(82, 35, 255, 0.15);
+}
+.contenedor header .menu-expansion .hamburguesa {
+  background-color: transparent;
+  transition: all .25s;
+}
+.contenedor header .menu-expansion .hamburguesa:before {
+  transition: all .25s;
+  content: "";
+  transform: rotate(45deg);
+  top: -0px;
+}
+.contenedor header .menu-expansion .hamburguesa:after {
+  transition: all .25s;
+  content: "";
+  transform: rotate(-45deg);
+  top: 0px;
+}
+.contenedor .inicio {
+  width: 100%;
+  height: 650px;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  background-image: url(../img/FONDO.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .98;
+}
+.contenedor .inicio article.descripcion {
+  width: 40%;
+  height: 200px;
+  left: 100px;
+  top: 300px;
+  padding: 1.5em 0;
+  background-color: rgba(17, 17, 17, 0.8);
+  position: relative;
+  text-align: center;
+}
+.contenedor .inicio article.descripcion h1 {
+  font-size: 3.5em;
+  color: #fff;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
+}
+.contenedor .inicio article.descripcion p {
+  padding: 5px;
+  font-size: 1.8em;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.contenedor .inicio article.descripcion h3 {
+  font-size: 2.5em;
+  color: #fff;
+  padding: 2%;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+.contenedor .inicio article.descripcion span#cambio {
+  width: auto;
+  color: #fff;
+  font-family: 'Arvo', sans-serif;
+  font-size: 1em;
+  padding: 2%;
+}
+.contenedor .acerca {
+  width: 100%;
+  height: 600px;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.contenedor .acerca article:first-child {
+  width: 85%;
+  margin: 0 auto;
+}
+.contenedor .acerca article:first-child h2 {
+  margin: 10px 0px 20px 0px;
+}
+.contenedor .acerca article:first-child p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+.contenedor .acerca hr {
+  width: 85%;
+  margin: 0 auto;
+}
+.contenedor .acerca article:last-child {
+  width: 85%;
+  margin: 0 auto;
+}
+.contenedor .acerca article:last-child h2 {
+  margin: 10px 0px 10px 0px;
+  margin-top: 20px;
+}
+.contenedor .acerca article:last-child img {
+  margin-top: 20px;
+  width: 10%;
+  min-width: 3%;
+  display: inline-block;
+  float: left;
+  margin-left: 3.5%;
+}
+.contenedor .servicios {
+  width: 100%;
+  height: 630px;
+  margin-top: 40px;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.contenedor .servicios h2 {
+  width: 85%;
+  margin: 40px auto;
+}
+.contenedor .servicios p {
+  width: 85%;
+  margin: 20px auto;
+  font-size: 1.8em;
+}
+.contenedor .servicios .general {
+  width: 85%;
+  margin-top: 80px;
+  margin-left: 8%;
+  text-align: center;
+}
+.contenedor .servicios .general .proceso {
+  width: 20%;
+  margin: 40px auto;
+  display: inline-block;
+  float: left;
+}
+.contenedor .servicios .general .proceso h3 {
+  margin-top: 40px;
+}
+.contenedor .servicios .general .proceso img {
+  width: 50%;
+  margin-left: 1.5em;
+}
+.contenedor .portafolio {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  background: #fff;
+}
+.contenedor .portafolio .seleccion {
+  width: 85%;
+  margin: 0 auto;
+}
+.contenedor .portafolio .seleccion .trabajos {
+  width: 100%;
+  margin: 0 auto;
+}
+.contenedor .portafolio .seleccion .trabajos h4 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+.contenedor .portafolio .seleccion .trabajos img {
+  width: 100%;
+  margin: 0 auto;
+}
+.contenedor footer {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  background: #3a3539;
+  padding-top: 40px;
+}
+.contenedor footer article.contacto {
+  width: 85%;
+  margin: 0 auto;
+}
+.contenedor footer article.contacto h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.contenedor footer article.contacto p {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.contenedor footer article.contacto form {
+  width: 100%;
+  min-width: 50%;
+  margin: 0 auto;
+}
+.contenedor footer article.contacto form input:required:invalid {
+  border-bottom: 1px solid red;
+}
+.contenedor footer article.contacto form input:required:valid {
+  border-bottom: 1px solid darkgreen;
+}
+.contenedor footer article.contacto form input[type="text"], .contenedor footer article.contacto form input[type="email"] {
+  width: 45%;
+  padding: 20px 0px;
+  margin-left: 4%;
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.5em;
+  border-bottom: 1px solid #fff;
+  outline: none;
+}
+.contenedor footer article.contacto form textarea {
+  width: 95%;
+  padding: 20px 0px;
+  margin-left: 4%;
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3em;
+}
+.contenedor footer article.contacto form input[type="submit"] {
+  background: #1FCE6D;
+  border: 0;
+  margin: 4%;
+  text-align: center;
+  width: 95%;
+  height: 60px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.contenedor footer article.contacto form input[type="submit"]:hover {
+  background: #16aa56;
+  animation-name: shake;
+}
+.contenedor footer article.derechos {
+  width: 85%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+.contenedor footer article.derechos img {
+  width: 15%;
+  display: inline-block;
+  float: left;
+}
+.contenedor footer article.derechos p {
+  width: 75%;
+  display: inline-block;
+  color: #fff;
+  line-height: 1.3;
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+.contenedor footer article.derechos a {
+  color: #fff;
+}
+
+/**************************************************************
+***************************************************************/
+/* Dispositivos laptop tabletas horizontales */
+@media screen and (min-width: 768px) and (max-width: 1225px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 1.3em !important;
+  }
+
+  h4 {
+    font-size: 1em !important;
+  }
+
+  .contenedor {
+    /* Inicio */
+    /* Acerca */
+    /* Servicios */
+    /*footer*/
+  }
+  .contenedor .inicio {
+    height: 550px;
+  }
+  .contenedor .inicio article.descripcion {
+    width: 50%;
+    height: 120px;
+    padding: 2em 0;
+    top: 250px;
+  }
+  .contenedor .inicio article.descripcion h1 {
+    font-size: 2.5em;
+  }
+  .contenedor .inicio article.descripcion p {
+    font-size: 1em;
+  }
+  .contenedor .inicio article.descripcion h3 {
+    font-size: 1.5em;
+  }
+  .contenedor .inicio article.descripcion span#cambio {
+    font-size: .9em;
+  }
+  .contenedor .acerca {
+    height: 460px;
+  }
+  .contenedor .servicios {
+    height: 600px;
+  }
+  .contenedor .servicios .general {
+    margin-top: 50px;
+    margin-left: 5%;
+  }
+  .contenedor .servicios .general .proceso {
+    width: 50%;
+    min-width: 10%;
+    display: inline-block;
+  }
+  .contenedor .servicios .general .proceso:nth-child(3), .contenedor .servicios .general .proceso:nth-child(4) {
+    margin-top: 10px;
+  }
+  .contenedor .servicios .general .proceso h3 {
+    margin-top: 10px;
+  }
+  .contenedor .servicios .general .proceso img {
+    width: 20%;
+    min-width: 15%;
+  }
+  .contenedor footer article.derechos {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0px;
+  }
+  .contenedor footer article.derechos img {
+    width: 40%;
+    display: block;
+    float: left;
+    margin-left: 10px;
+  }
+  .contenedor footer article.derechos p {
+    width: 100%;
+    display: block;
+    clear: both;
+    color: #fff;
+    line-height: 1.3;
+    margin-left: 10px;
+    font-size: .9em !important;
+  }
+  .contenedor footer article.derechos a {
+    color: #fff;
+    font-size: .7em !important;
+  }
+
+  /* Contenedor */
+}
+/*****************************************************
+*****************************************************/
+/* Dispositivos smartphone y tabletas verticales*/
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  p {
+    font-size: .9em !important;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: .8em;
+  }
+
+  a {
+    font-size: .7em;
+  }
+
+  .contenedor {
+    /* Inicio */
+    /* Acerca */
+    /* Servicios */
+  }
+  .contenedor header figure.logo {
+    float: left;
+    padding: 30px 60px;
+  }
+  .contenedor header figure.logo img {
+    width: 150px;
+  }
+  .contenedor .inicio {
+    height: 350px;
+  }
+  .contenedor .inicio article.descripcion {
+    width: 60%;
+    height: 130px;
+    padding: .9em;
+    text-align: center;
+    top: 100px;
+    left: 20px;
+  }
+  .contenedor .inicio article.descripcion h1 {
+    font-size: 2em;
+  }
+  .contenedor .inicio article.descripcion p {
+    font-size: 1em;
+    line-height: 1.2;
+  }
+  .contenedor .inicio article.descripcion h3 {
+    font-size: 1.1em;
+  }
+  .contenedor .inicio article.descripcion span#cambio {
+    font-size: .9em;
+  }
+  .contenedor .acerca {
+    height: 400px;
+  }
+  .contenedor .acerca img {
+    width: 15%;
+  }
+  .contenedor .servicios {
+    height: 470px;
+  }
+  .contenedor .servicios .general {
+    margin-top: 50px;
+    margin-left: 5%;
+  }
+  .contenedor .servicios .general .proceso {
+    width: 50%;
+    min-width: 10%;
+    display: inline-block;
+  }
+  .contenedor .servicios .general .proceso:nth-child(3), .contenedor .servicios .general .proceso:nth-child(4) {
+    margin-top: 10px;
+  }
+  .contenedor .servicios .general .proceso h3 {
+    margin-top: 10px;
+  }
+  .contenedor .servicios .general .proceso img {
+    width: 25%;
+    min-width: 15%;
+  }
+  .contenedor .portafolio h4 {
+    font-size: 1em !important;
+  }
+  .contenedor footer form {
+    font-size: .8em !important;
+  }
+  .contenedor footer form input {
+    width: 90% !important;
+    display: block;
+  }
+  .contenedor footer article.derechos {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0px;
+  }
+  .contenedor footer article.derechos img {
+    width: 40%;
+    display: block;
+    float: left;
+    margin-left: 8px;
+  }
+  .contenedor footer article.derechos p {
+    width: 100%;
+    display: block;
+    clear: both;
+    color: #fff;
+    line-height: 1.3;
+    margin-left: 8px;
+    font-size: .7em !important;
+  }
+  .contenedor footer article.derechos a {
+    color: #fff;
+    font-size: .9em;
+  }
+}
+/*****************************************************
+*****************************************************/
+/* Dispositivos smartphone */
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  p {
+    font-size: .9em !important;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  h3 {
+    font-size: .8em;
+  }
+
+  a {
+    font-size: .7em;
+  }
+
+  .contenedor {
+    /* Inicio */
+    /* Acerca */
+    /* Servicios */
+  }
+  .contenedor header {
+    /* Inicio */
+  }
+  .contenedor header figure.logo {
+    float: left;
+    padding: 33px 30px;
+  }
+  .contenedor header figure.logo img {
+    width: 150px;
+  }
+  .contenedor header .inicio {
+    height: 350px;
+  }
+  .contenedor .inicio {
+    height: 300px;
+  }
+  .contenedor .inicio article.descripcion {
+    width: 70%;
+    height: 110px;
+    padding: 1.5em;
+    top: 120px;
+    left: 20px;
+  }
+  .contenedor .inicio article.descripcion h1 {
+    font-size: 1.5em;
+  }
+  .contenedor .inicio article.descripcion p {
+    font-size: .8em;
+    line-height: 1.2;
+  }
+  .contenedor .inicio article.descripcion h3 {
+    font-size: 1em;
+  }
+  .contenedor .inicio article.descripcion span#cambio {
+    font-size: .9em;
+  }
+  .contenedor .acerca {
+    height: 400px;
+  }
+  .contenedor .acerca img {
+    width: 15%;
+  }
+  .contenedor .servicios {
+    height: 420px;
+  }
+  .contenedor .servicios .general {
+    margin-top: 50px;
+    margin-left: 5%;
+  }
+  .contenedor .servicios .general .proceso {
+    width: 50%;
+    min-width: 10%;
+    display: inline-block;
+  }
+  .contenedor .servicios .general .proceso:nth-child(3), .contenedor .servicios .general .proceso:nth-child(4) {
+    margin-top: 10px;
+  }
+  .contenedor .servicios .general .proceso h3 {
+    margin-top: 10px;
+  }
+  .contenedor .servicios .general .proceso img {
+    width: 25%;
+    min-width: 15%;
+  }
+  .contenedor .portafolio h4 {
+    font-size: 1em !important;
+  }
+  .contenedor footer form {
+    font-size: .7em;
+  }
+  .contenedor footer form input {
+    width: 90% !important;
+    display: block;
+  }
+  .contenedor footer article.derechos {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0px;
+  }
+  .contenedor footer article.derechos img {
+    width: 40%;
+    display: block;
+    float: left;
+    margin-left: 8px;
+  }
+  .contenedor footer article.derechos p {
+    width: 100%;
+    display: block;
+    clear: both;
+    color: #fff;
+    line-height: 1.3;
+    margin-left: 8px;
+  }
+  .contenedor footer article.derechos a {
+    color: #fff;
+    font-size: .9em;
+  }
+}
+/*****************************************************
+*****************************************************/
