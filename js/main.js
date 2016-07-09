@@ -1,5 +1,5 @@
         // Desaparecer/Aparecer menu menu cuando bajo
-        $(function() {
+        /*$(function() {
             var pA, pN = 0;
             $(window).scroll(function(e){
             e.stopPropagation();
@@ -12,11 +12,12 @@
             }
                 pA = pN;
             });
-        });
+        });*/
 
         //Scroll Top
         (function() {
-            $('a[href*="#"]:not([href="#"])').click(function() {
+            $('a[href*="#"]:not([href="#"])').click(function(e) {
+            e.preventDefault();                
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
